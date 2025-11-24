@@ -1,0 +1,39 @@
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "orgName": "Google",
+    "adminName": "Alex",
+    "email": "alex@google.co.in",
+    "password": "alex@123"
+}
+###
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "alex@google.co.in",
+    "password": "alex@123",
+    "orgName": "Google"
+}
+###
+
+GET http://localhost:5000/employees
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm9yZ0lkIjoyLCJpYXQiOjE3NjM4NzY0NTgsImV4cCI6MTc2MzkwNTI1OH0.TC2t8dvBzny6L1BHY-vJCpHUG2q1kqlbjDKMI0tRQgk
+###
+
+GET http://localhost:5000/employees/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm9yZ0lkIjoyLCJpYXQiOjE3NjM4NzY0NTgsImV4cCI6MTc2MzkwNTI1OH0.TC2t8dvBzny6L1BHY-vJCpHUG2q1kqlbjDKMI0tRQgk
+###
+
+POST http://localhost:5000/employees
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm9yZ0lkIjoyLCJpYXQiOjE3NjM4NzY0NTgsImV4cCI6MTc2MzkwNTI1OH0.TC2t8dvBzny6L1BHY-vJCpHUG2q1kqlbjDKMI0tRQgk
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "phone": "9949202038"
+}
